@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Happy Rose Day ❤️</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: linear-gradient(135deg, #ff758c, #ff7eb3);
+      overflow: hidden;
+    }
+
+    h1 {
+      margin-top: 40px;
+      color: white;
+    }
+
+    #surpriseBtn {
+      padding: 15px 25px;
+      font-size: 18px;
+      background: white;
+      color: #ff4b7d;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    #memoryBox {
+      display: none;
+      margin-top: 30px;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    #memoryBox img {
+      width: 85%;
+      max-width: 350px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    .message {
+      color: white;
+      font-size: 20px;
+      margin-top: 15px;
+      padding: 0 20px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Tap to Open Your Surprise 🌹</h1>
+<button id="surpriseBtn" onclick="showSurprise()">Open</button>
+
+<div id="memoryBox">
+  <img src="photo1.jpg" alt="Memory">
+  <p class="message">Happy Rose Day ❤️ Every memory with you is my favorite story 🌹✨</p>
+</div>
+
+<audio id="bgMusic" src="song.mp3"></audio>
+
+<script>
+function showSurprise() {
+  document.getElementById("memoryBox").style.display = "block";
+  document.getElementById("surpriseBtn").style.display = "none";
+  document.getElementById("bgMusic").play();
+}
+</script>
+
+</body>
+</html>
